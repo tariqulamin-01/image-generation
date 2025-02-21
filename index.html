@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamShaper-7 Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DreamShaper-7 Image Generator</h1>
+        <form method="POST">
+            <input type="text" name="prompt" placeholder="Enter a prompt (e.g., 'a futuristic cityscape')" required>
+            <button type="submit">Generate Image</button>
+        </form>
+
+        {% if image_path %}
+            <h2>Generated Image:</h2>
+            <img src="{{ image_path }}" alt="Generated Image">
+        {% endif %}
+    </div>
+</body>
+</html>
